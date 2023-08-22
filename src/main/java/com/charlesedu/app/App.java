@@ -8,9 +8,9 @@ import com.charlesedu.domain.Person;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // Person person1 = new Person(null, "Charles", "charles@gmail.com");
-        // Person person2 = new Person(null, "Eduardo", "eduardo@gmail.com");
-        // Person person3 = new Person(null, "Hally", "hally@gmail.com");
+        Person person1 = new Person(null, "Agnaldo", "agnaldo@gmail.com");
+        Person person2 = new Person(null, "Dudu", "dudu@gmail.com");
+        Person person3 = new Person(null, "John", "john@gmail.com");
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-example");
         EntityManager em = emf.createEntityManager();
@@ -24,11 +24,11 @@ public class App {
 
         //Inserção no banco de dados
 
-        // em.getTransaction().begin();
-        // em.persist(person1);
-        // em.persist(person2);
-        // em.persist(person3);
-        // em.getTransaction().commit();
+        em.getTransaction().begin();
+        em.persist(person1);
+        em.persist(person2);
+        em.persist(person3);
+        em.getTransaction().commit();
 
 
         //==================================================================================================
@@ -41,15 +41,15 @@ public class App {
         // em.remove(person);
         // em.getTransaction().commit();
 
-        // em.close();
-        // emf.close();
+        em.close();
+        emf.close();
 
         // System.out.println("Persons saved successfully!");
 
-        // System.out.println(person1);
-        // System.out.println(person2);
-        // System.out.println(person3);
+        System.out.println(person1);
+        System.out.println(person2);
+        System.out.println(person3);
 
-        System.out.println("Pronto!");
+        System.out.println("\nPronto!");
     }
 }
